@@ -8,7 +8,6 @@ const items1: MenuProps['items'] = ['1', '2', '3'].map((key) => ({
   key,
   label: `nav ${key}`,
 }));
-
 const Home: React.FC = () => (
   <Layout>
     <Header className="header">
