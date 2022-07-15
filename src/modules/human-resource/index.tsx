@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 
-import HumanForm from '../home/form/index';
+import HumanForm from './form/index';
 
-export const HumanResourceIntelligentForm: FunctionComponent = () => {
+const HumanResourceFormPageRouter: FunctionComponent = () => {
   return (
     <h1>
       人力资源智能表单填写页
@@ -10,3 +10,5 @@ export const HumanResourceIntelligentForm: FunctionComponent = () => {
     </h1>
   );
 };
+
+export default HumanResourceFormPageRouter;

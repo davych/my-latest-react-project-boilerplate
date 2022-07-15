@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ant-form-item-explain-error {
+  color: green!important;
+}
+.ant-input-affix-wrapper-status-error {
+  border-color: green!important
+}

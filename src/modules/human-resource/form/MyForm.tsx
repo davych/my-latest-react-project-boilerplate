@@ -16,7 +16,7 @@ export const MyForm: FunctionComponent<FormikFormProps & FormikValues> = (
   return (
     <Form>
       {/* every formik-antd component must have the 'name' prop set: */}
-      <Form.Item label="Name" name="firstName">
+      <Form.Item style={{ color: 'green' }} label="Name" name="firstName">
         <Input name="firstName" suffix />
       </Form.Item>
       {/* the rest of the api stays as is */}

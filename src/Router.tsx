@@ -2,19 +2,15 @@ import React, { FunctionComponent } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { IntelligentFormLayout } from './layouts/IntelligentFormLayout';
-import { Home } from './pages/home/index';
-import { HumanResourceIntelligentForm } from './pages/human-resource/IntelligentForm';
+import HomeRouter from './modules/home/router';
+import HumanResourceFormPageRouter from './modules/human-resource/router';
 
 export const AppRouter: FunctionComponent = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/" element={<Home />} />
+      {HomeRouter}
       <Route path="intelligent-form" element={<IntelligentFormLayout />}>
-        <Route
-          path="human-resource"
-          element={<HumanResourceIntelligentForm />}
-        />
+        {HumanResourceFormPageRouter}
       </Route>
     </Routes>
   );
