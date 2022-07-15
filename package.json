@@ -7,7 +7,14 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "lint": "eslint \"{src,test}/**/*.{ts,tsx}\" --fix"
+    "lint": "eslint \"{src,test}/**/*.{ts,tsx}\" --fix",
+    "commit": "git-cz",
+    "postinstall": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   },
   "dependencies": {
     "@craco/craco": "^6.4.4",
@@ -32,6 +39,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "formik": "^2.2.9",
     "formik-antd": "^2.0.4",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -41,6 +49,19 @@
     "web-vitals": "^2.1.4",
     "webpack-bundle-analyzer": "^4.5.0",
     "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/cz-commitlint": "^12.1.4",
+    "commitizen": "^4.2.4",
+    "husky": "^6.0.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "yarn lint",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
